@@ -1,0 +1,8 @@
+.products {
+  display: flex;
+  max-width: 1168px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  margin: 0 auto;
+}

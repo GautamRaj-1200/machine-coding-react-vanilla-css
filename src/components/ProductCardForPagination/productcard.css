@@ -1,0 +1,13 @@
+.product {
+  box-shadow: 5px 10px 8px #d3d0d0;
+  max-width: 300px;
+}
+.product__title {
+  font-size: 2rem;
+}
+.product__image-container {
+  height: 80%;
+}
+.product__image {
+  height: 100%;
+}
