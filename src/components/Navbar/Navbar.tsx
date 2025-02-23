@@ -27,6 +27,10 @@ const Navbar = () => {
   useEffect(() => {
     if (navbarVisible)
       document.addEventListener("mousedown", handleClickOutside);
+    // Cleanup function to remove the event listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, [navbarVisible]);
 
   return (
@@ -77,7 +81,7 @@ const Navbar = () => {
             <input placeholder="search" className="navbar__search" />
             <button className="navbar__search-btn">Search</button>
           </div>
-          <div onClick={toggleNavbar} className="navbar__hamburger">
+          <div onClick={toggleNavbar} className="navbar__hamburger" ref={hamburgerRef}>
             <div
               className={`navbar__hamburger-bar navbar__hamburger-bar1 ${
                 navbarVisible ? "active" : ""
